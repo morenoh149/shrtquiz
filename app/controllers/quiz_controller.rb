@@ -10,8 +10,8 @@ class QuizController < ApplicationController
       flash[:success] = "Quiz created!"
       redirect_to quiz_url(@quiz)
     else
-      flash[:error] = "Unable to save micropost"
-      redirect_to quiz_url(@quiz)
+      flash[:error] = "Invalid micropost data"
+      redirect_to new_quiz_url
     end
   end
   def show
