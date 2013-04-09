@@ -11,14 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402025746) do
+ActiveRecord::Schema.define(:version => 20130409031207) do
+
+  create_table "answers", :force => true do |t|
+    t.integer  "quiz_id"
+    t.integer  "option"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "quizzes", :force => true do |t|
     t.string   "question"
-    t.string   "answer1"
-    t.string   "answer2"
-    t.string   "answer3"
-    t.string   "answer4"
+    t.string   "option1"
+    t.string   "option2"
+    t.string   "option3"
+    t.string   "option4"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
