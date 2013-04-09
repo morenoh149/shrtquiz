@@ -1,14 +1,17 @@
 #answer
   = form_for @answer, :url => { :action => "create" } do |f|
-    %br 
-    =@quiz.question
+    = @quiz.question
     = hidden_field_tag :quiz_id, @quiz.id
+    %br
     = radio_button_tag :option1, "#{@quiz.option1}"
     = @quiz.option1
+    %br
     = radio_button_tag :option2, "#{@quiz.option2}"
     = @quiz.option2
+    %br
     = radio_button_tag :option3, "#{@quiz.option3}"
     = @quiz.option3
+    %br
     = radio_button_tag :option4, "#{@quiz.option4}"
     = @quiz.option4
     %br
