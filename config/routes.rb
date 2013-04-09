@@ -1,5 +1,7 @@
 Shrtquiz::Application.routes.draw do
   resources :quiz
+  resources :answer
+  match 'quiz/:quiz_id/answer/' => "answer#new"  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,4 @@
-= form_for(@answers) do 
+= form_for @answers do |a|
   = radio_button_tag :answer1, "#{@quiz.answer1}"
   = @quiz.answer1
   = radio_button_tag :answer2, "#{@quiz.answer2}"
