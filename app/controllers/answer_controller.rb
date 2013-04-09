@@ -1,5 +1,4 @@
 class AnswerController < ApplicationController
-
 	def new
     @answer = Answer.new
     @quiz = Quiz.find(params[:quiz_id])
@@ -18,14 +17,15 @@ class AnswerController < ApplicationController
     
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to '/index.html', notice: 'Awesom.Go feed them!!!.' }
-        format.json { render json: @answer, status: :created, location: @answer }
+        format.html { redirect_to '/index.html',
+                      notice: 'Thanks for answering a ShrtQuiz!' }
+        format.json { render json: @answer,
+                      status: :created, location: @answer }
       else
         format.html { render action: "new" }
-        format.json { render json: @answer.errors, status: :unprocessable_entity }
+        format.json { render json: @answer.errors,
+                      status: :unprocessable_entity }
       end
     end
   end
-
-
 end
