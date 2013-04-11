@@ -1,10 +1,5 @@
-= form_for @answers do |a|
-  = radio_button_tag :answer1, "#{@quiz.answer1}"
-  = @quiz.answer1
-  = radio_button_tag :answer2, "#{@quiz.answer2}"
-  = @quiz.answer2
-  = radio_button_tag :answer3, "#{@quiz.answer3}"
-  = @quiz.answer3
-  = radio_button_tag :answer4, "#{@quiz.answer4}"
-  = @quiz.answer4
-  = button_tag 
+<!-- view for a quiz, will eventually display stats, for now just shows
+a shortened url for taking this quiz -->
+%h2 ShrtQuiz!
+take the
+= link_to "quiz", 
